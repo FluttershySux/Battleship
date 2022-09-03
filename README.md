@@ -1,1 +1,1 @@
-Live Demo: FluttershySux.github.io/Battleship/dist
+Live Demo: fluttershysux.github.io/Battleship/dist
