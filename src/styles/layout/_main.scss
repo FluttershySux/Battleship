@@ -1,0 +1,90 @@
+@import '../sass-utils/mixins';
+@import '../sass-utils/variables';
+
+.user-gameboard {
+  @include createGrid;
+  @include createBorder(solid, 1px, $colour-white);
+  margin-right: 2rem;
+  @media (max-width: 768px) {
+    margin: 0 0 3rem 0;
+  }
+}
+
+.computer-gameboard {
+  @include createGrid;
+  @include createBorder(solid, 1px, $colour-white);
+  margin-left: 2rem;
+  display: none;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+}
+
+.grid-square {
+  @include createBorder(solid, 1px, $colour-white);
+  @include displayFlex(row, center, center);
+  &:hover {
+    background-color: $colour-red;
+    cursor: pointer;
+  }
+  .fa-fire {
+    color: $colour-orange;
+    font-size: 2rem;
+  }
+}
+
+.missed {
+  background-color: $colour-blue;
+}
+
+.placement-unavailable {
+  background-color: $colour-red;
+}
+
+.disabled {
+  background-color: $colour-grey;
+  transition: background-color 100ms linear;
+  pointer-events: none;
+}
+
+.start-game-container {
+  @include displayFlex(row, center, center);
+  display: none;
+  max-width: 30rem;
+  min-width: 30rem;
+}
+
+.ships-container {
+  @include displayFlex(column, center, center);
+  max-width: 30rem;
+  min-width: 30rem;
+  height: 30rem;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+  .alignment-button-container {
+    margin: 1rem;
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+  .auto-place-button-container {
+    margin: 1rem;
+  }
+  .ships-heading-container {
+    flex: 0.15;
+    .ships-heading {
+      color: $colour-red;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      font-size: 1.75rem;
+    }
+  }
+  .ships {
+    @include displayFlex(row, center, center);
+    flex: 0.85;
+    @media (max-width: 992px) {
+      display: none;
+    }
+  }
+}

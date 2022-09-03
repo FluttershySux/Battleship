@@ -1,0 +1,28 @@
+@import '../sass-utils/mixins';
+@import '../sass-utils/fonts';
+
+button {
+  background-color: $colour-red;
+  border: 0.13rem solid $colour-white;
+  box-sizing: border-box;
+  color: $colour-white;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  padding: 0.35rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $colour-white;
+    border: 0.13rem solid $colour-red;
+    color: $colour-red;
+    transform: scale(1.1);
+  }
+  @media (max-width: 450px) {
+    font-size: 11px;
+  }
+  @media (max-width: 330px) {
+    font-size: 9.5px;
+  }
+}

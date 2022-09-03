@@ -1,0 +1,34 @@
+@import '../sass-utils/variables';
+@import '../sass-utils/mixins';
+
+#carrier {
+  background-color: $carrier-colour;
+}
+#battleship {
+  background-color: $battleship-colour;
+}
+#cruiser {
+  background-color: $cruiser-colour;
+}
+#submarine {
+  background-color: $submarine-colour;
+}
+#destroyer {
+  background-color: $destroyer-colour;
+}
+.ship {
+  @include displayFlex(column, flex-start, stretch);
+  height: fit-content;
+  margin: 5px;
+  width: fit-content;
+  &:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+  }
+  div {
+    @include createBorder(solid, 1px, $colour-white);
+    cursor: move;
+    height: 2.875rem;
+    width: 2.875rem;
+  }
+}

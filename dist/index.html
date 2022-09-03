@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Interactive browser-based battleship game based on the Hasbro™ board game."
+    />
+    <script
+      src="https://kit.fontawesome.com/8f40f8a960.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Battleship</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+  </head>
+  <body>
+    <header>
+      <h1 class="main-heading">BATTLESHIP</h1>
+    </header>
+    <main>
+      <div class="user-gameboard"></div>
+      <div class="computer-gameboard"></div>
+      <div class="start-game-container">
+        <button class="start-game-button" type="button">START GAME</button>
+      </div>
+      <div class="gameover-modal">
+        <div class="modal-content">
+          <h2 class="winner-announcement"></h2>
+          <button class="play-again-button" type="button">PLAY AGAIN</button>
+        </div>
+      </div>
+      <div class="ships-container">
+        <div class="ships-heading-container">
+          <h2 class="ships-heading">Place Your Fleet</h2>
+        </div>
+        <div class="alignment-button-container">
+          <button class="alignment-button" type="button">
+            CHANGE ALIGNMENT
+          </button>
+        </div>
+        <div class="auto-place-button-container">
+          <button class="auto-place-button" type="button">AUTO PLACE</button>
+        </div>
+        <div class="ships">
+          <div id="carrier" class="ship" draggable="true">
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+            <div data-index="2"></div>
+            <div data-index="3"></div>
+            <div data-index="4"></div>
+          </div>
+          <div id="battleship" class="ship" draggable="true">
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+            <div data-index="2"></div>
+            <div data-index="3"></div>
+          </div>
+          <div id="cruiser" class="ship" draggable="true">
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+            <div data-index="2"></div>
+          </div>
+          <div id="submarine" class="ship" draggable="true">
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+            <div data-index="2"></div>
+          </div>
+          <div id="destroyer" class="ship" draggable="true">
+            <div data-index="0"></div>
+            <div data-index="1"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
